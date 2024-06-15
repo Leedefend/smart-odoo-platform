@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_project_project,access_project_project,model_project_project,base.group_user,1,1,1,1
+access_project_task,access_project_task,model_project_task,base.group_user,1,1,1,1
+access_project_plan,access_project_plan,model_project_plan,base.group_user,1,1,1,1
+access_project_cost,access_project_cost,model_project_cost,base.group_user,1,1,1,1
+access_project_quality,access_project_quality,model_project_quality,base.group_user,1,1,1,1
+access_project_safety,access_project_safety,model_project_safety,base.group_user,1,1,1,1
+access_project_risk,access_project_risk,model_project_risk,base.group_user,1,1,1,1
