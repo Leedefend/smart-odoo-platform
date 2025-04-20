@@ -1,0 +1,78 @@
+<odoo>
+    <data>
+         <!-- 继承项目表单视图 -->
+        <record id="view_project_form_inherit" model="ir.ui.view">
+            <field name="name">project.project.form.inherit</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <!-- 在 notebook 中插入新的选项卡 -->
+                <xpath expr="//form/sheet/notebook" position="before">
+                    <notebook>
+                    <page string="项目基础信息">
+                        <group>
+                            <group>
+                                <field name="construction_content" string="建设内容及规模" />
+                                <field name="stage_id" string="项目阶段"/>
+                                <field name="project_nature" string="项目性质"/>
+                                <field name="annual_target" string="年度目标"/>
+                            </group>
+                            <group>
+                                <field name="segment_name" string="标段名称"/>
+                                <field name="segment_num" string="标段编号"/>
+                                <field name="project_management_company_id" string="项目管理公司"/>
+                                <field name="construction_location" string="建设位置"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="参建单位">
+                    <field name="partner_ids">
+                        <tree editable="bottom">
+                            <field name="name" string="公司名称"/>
+                            <field name="partner_type" string="单位类型"/>
+                            <field name="manager" string="负责人"/>
+                            <field name="contact_info" string="联系方式"/>
+                        </tree>
+                        <form string="参建单位" editable="bottom">
+                            <sheet>
+                                <group>
+                                    <field name="name" string="公司名称"/>
+                                    <field name="partner_type" string="单位类型"/>
+                                    <field name="manager" string="负责人"/>
+                                    <field name="contact_info" string="联系方式"/>
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                    </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+
+        <!-- 继承项目树视图 -->
+        <record id="view_project_tree_inherit" model="ir.ui.view">
+            <field name="name">project.project.tree.inherit</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='name']" position="before">
+                    <field name="prj_num" string="项目编号" optional="show"/>
+                    <field name="stage_id" string="项目阶段"/>
+                </xpath>
+                <xpath expr="//tree" position="inside">
+                    <field name="construction_content" string="建设内容及规模"  />
+                    <field name="annual_target" string="年度目标"/>
+
+                    <field name="project_nature" string="项目性质"/>
+                    <field name="construction_location" string="建设位置"/>
+                    <field name="segment_num" string="标段编号"/>
+                    <field name="segment_name" string="标段名称"/>
+                    <field name="project_management_company_id" string="项目管理公司"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

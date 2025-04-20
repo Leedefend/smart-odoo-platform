@@ -14,6 +14,7 @@
               'views/safety_views.xml',
               'views/menus.xml',
               'report/reports.xml',
+              'data/ir_model_data.xml',
               ],
     #'post_init_hook': '_project_post_init',
     'installable': True,
