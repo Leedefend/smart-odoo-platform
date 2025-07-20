@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/addons/Fully_Optimized_Engineering_Project_Management" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/新建文件夹/contract" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/addons" vcs="Git" />
   </component>
 </project>
