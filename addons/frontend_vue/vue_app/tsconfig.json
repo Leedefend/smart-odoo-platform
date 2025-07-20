@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": [
+      "pinia",
+      "./src/types/pinia"  // ✅ 加入这个
+    ],
+     // ✅ 添加路径别名支持
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+  }},
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.vue"         // ✅ 如果你使用 Vue 单文件组件
+  ],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
